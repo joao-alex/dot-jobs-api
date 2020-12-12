@@ -26,3 +26,25 @@ Para ajudar no desenvolvimento:
 ```bash
     yarn build
 ```
+
+## Importante 🚩
+
+Toda vez que você der Pull no repositório lembre se de dar os seguintes comandos
+```bash
+    yarn
+    yarn typeorm migration:run
+```
+
+## Banco de Dados
+
+Para configurar o Banco de dados:
+
+```bash
+    docker run --name dot_jobs_postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+    docker exec -it dot_jobs_postgres /bin/bash
+    psql postgres postgres -W #"A senha é docker"
+    create database dot_jobs;
+    quit
+    exit
+    yarn typeorm migration:run
+```

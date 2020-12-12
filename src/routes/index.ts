@@ -1,8 +1,14 @@
 // importa um router, que irá criar rotas no nosso servidor
 import { Router } from 'express'
 
+// importa um outro router para ser usado
+import usersRouter from './users.routes'
+
 // criar o router
 const routes = Router()
+
+// diz que o router de usuário será acessado pelo caminho /users
+routes.use('/users', usersRouter)
 
 // cria uma rota acessível por GET
 routes.get('/', (request, response) => {
