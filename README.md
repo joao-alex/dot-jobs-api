@@ -27,7 +27,7 @@ Para ajudar no desenvolvimento:
     yarn build
 ```
 
-## Importante 🚩
+## Importante 🚩 
 
 Toda vez que você der Pull no repositório lembre se de dar os seguintes comandos
 ```bash
